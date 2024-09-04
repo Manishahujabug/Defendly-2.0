@@ -202,22 +202,31 @@
   
   
 
-  // Accordion functionality
+// Accordion functionality with smooth height transition
 document.querySelectorAll('.faq-question').forEach(item => {
   item.addEventListener('click', function () {
       const faqItem = this.parentElement;
+      const faqAnswer = faqItem.querySelector('.faq-answer');
 
-      // Toggle active class
-      faqItem.classList.toggle('active');
-
-      // Close others when one is open
-      document.querySelectorAll('.faq-item').forEach(otherItem => {
-          if (otherItem !== faqItem) {
+      if (faqItem.classList.contains('active')) {
+          // Close the item
+          faqItem.classList.remove('active');
+          faqAnswer.style.maxHeight = null; // Reset the height
+      } else {
+          // Close other items
+          document.querySelectorAll('.faq-item').forEach(otherItem => {
+              const otherAnswer = otherItem.querySelector('.faq-answer');
               otherItem.classList.remove('active');
-          }
-      });
+              otherAnswer.style.maxHeight = null;
+          });
+
+          // Open the clicked item
+          faqItem.classList.add('active');
+          faqAnswer.style.maxHeight = faqAnswer.scrollHeight + "px"; // Set the height dynamically
+      }
   });
 });
+
 
   
 
