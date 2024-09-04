@@ -1059,7 +1059,9 @@ h6 {
     justify-content: center;
     gap: 20px; /* Space between buttons */
 }
-
+.cta-buttons a{
+    color: white;
+}
 .cta-button {
     background-color: #092C66; /* Dark blue background */
     color: white;
@@ -1081,9 +1083,8 @@ h6 {
 .cta-button:hover {
     background-color: #ff0000; /* Slightly lighter blue on hover */
 }
-.cta-text:hover {
-    color: white;
-}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
