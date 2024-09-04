@@ -168,41 +168,58 @@
 
 
 
-
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-$(document).ready(function(){
-  $('.testimonial-carousel').slick({
-    infinite: true,
-    slidesToShow: 3, /* Show 3 testimonials at a time */
-    slidesToScroll: 1, /* Scroll one by one */
-    autoplay: true,
-    autoplaySpeed: 2000, /* Auto-scroll speed */
-    arrows: false,
-    dots: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
+  $(document).ready(function(){
+    $('.testimonial-carousel').slick({
+      infinite: true,
+      slidesToShow: 3, /* Show 3 testimonials at a time */
+      slidesToScroll: 1, /* Scroll one by one */
+      autoplay: true, /* Auto-scroll */
+      autoplaySpeed: 2000, /* Auto-scroll speed: 2000ms = 2 seconds */
+      speed: 600, /* Speed of slide transition */
+      arrows: true, /* Enable left and right arrows */
+      dots: true, /* Enable dots for navigation */
+      pauseOnHover: true, /* Pause auto-scroll when hovering */
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
         }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+      ]
+    });
+  });
+  
+  
+
+  // Accordion functionality
+document.querySelectorAll('.faq-question').forEach(item => {
+  item.addEventListener('click', function () {
+      const faqItem = this.parentElement;
+
+      // Toggle active class
+      faqItem.classList.toggle('active');
+
+      // Close others when one is open
+      document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== faqItem) {
+              otherItem.classList.remove('active');
+          }
+      });
   });
 });
+
+  
 
 
 

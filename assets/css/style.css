@@ -457,7 +457,7 @@ h6 {
 
 @media (max-width: 768px) {
     #hero {
-        background-position: -320px;
+        background-position: -650px;
     }
     #hero h1 {
         font-size: 30px;
@@ -864,10 +864,17 @@ h6 {
         margin-right: 0;
         max-width: 100%;
         margin-bottom: 20px;
+        
     }
 
     .how-it-works-boxes {
         grid-template-columns: 1fr; /* Make the boxes full width on small screens */
+    }
+    .how-it-works-image img {
+        width: 65%;
+        height: auto;
+        border-radius: 10px; /* Rounded corners */
+        margin-left: 37%;
     }
 }
 
@@ -898,7 +905,7 @@ h6 {
 }
 
 .testimonial-carousel .testimonial-item {
-    background-color: #0A2A5E; /* Dark blue background */
+    background-color: #092C66; /* Dark blue background */
     color: white;
     border-radius: 15px;
     padding: 20px;
@@ -916,6 +923,14 @@ h6 {
     position: absolute;
     top: 20px;
     left: 20px;
+}
+
+.testimonial-item p{
+    margin-top: 76px;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    text-align: left;
+    
 }
 
 .testimonial-author {
@@ -949,6 +964,72 @@ h6 {
         min-height: 300px;
     }
 }
+
+
+
+/*--------------------------------------------------------------
+# FAQ
+--------------------------------------------------------------*/
+
+
+.faq-section {
+    padding: 40px 20px;
+    text-align: left;
+}
+
+.faq-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #092C66;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #092C66; /* Adds a separator between items */
+}
+
+.faq-question {
+    background-color: transparent;
+    color: #092C66;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    padding: 15px 0;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: #ff0000; /* Change color on hover */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 10px;
+    color: #333;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 150px; /* Adjust this to fit your content */
+}
+
+.faq-item.active .faq-question {
+    color: #ff0000; /* Change question color when active */
+}
+
+
 
 
 
