@@ -687,8 +687,6 @@ h6 {
 # Why Choose Defendly
 --------------------------------------------------------------*/
 
-
-
 .why-choose-section {
     padding: 40px 20px;
     text-align: center;
@@ -715,7 +713,7 @@ h6 {
 }
 
 .choose-item {
-    background-color: #0A2A5E; /* Dark blue background */
+    background-color: #092C66; /* Dark blue background */
     color: white;
     border-radius: 15px;
     padding: 20px;
@@ -787,7 +785,170 @@ h6 {
 
 
 
+/*--------------------------------------------------------------
+# How Defendly WOrks
+--------------------------------------------------------------*/
+.how-it-works-section {
+    padding: 40px 20px;
+    background-color: #092C66; /* Dark blue background */
+    color: white;
+    text-align: center;
+}
 
+.how-it-works-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.how-it-works-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+.how-it-works-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Ensure responsiveness */
+}
+
+.how-it-works-image {
+    flex: 1;
+    max-width: 45%; /* Adjust based on how much space you want the image to take */
+    margin-right: 0px; /* Space between image and text */
+    margin-left: -130px;
+}
+
+.how-it-works-image img {
+    width: 60%;
+    height: auto;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.how-it-works-boxes {
+    flex: 1;
+    max-width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.work-box {
+    background-color: #092C66; /* Slightly lighter blue background */
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+}
+
+.work-box h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.work-box p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .how-it-works-content {
+        flex-direction: column;
+    }
+
+    .how-it-works-image {
+        margin-right: 0;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .how-it-works-boxes {
+        grid-template-columns: 1fr; /* Make the boxes full width on small screens */
+    }
+}
+
+
+
+/*--------------------------------------------------------------
+# testimonials
+--------------------------------------------------------------*/
+
+
+
+.testimonials-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.testimonials-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonials-section h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.testimonial-carousel .testimonial-item {
+    background-color: #0A2A5E; /* Dark blue background */
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 350px;
+    position: relative;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quote-icon {
+    font-size: 36px;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.testimonial-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonial-author h4 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.testimonial-author p {
+    margin: 0;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .testimonial-carousel .testimonial-item {
+        min-height: 300px;
+    }
+}
 
 
 
