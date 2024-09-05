@@ -17,12 +17,12 @@ body {
 }
 
 a {
-    color: #ff712b;
+    color: #092C66;
     text-decoration: none;
 }
 
 a:hover {
-    color: #ff712b;
+    color: #092C66;
     text-decoration: none;
 }
 
@@ -48,7 +48,7 @@ h6 {
     right: 15px;
     bottom: 15px;
     z-index: 996;
-    background: #ff0000;
+    background: #092C66;
     width: 40px;
     height: 40px;
     border-radius: 4px;
@@ -62,7 +62,7 @@ h6 {
 }
 
 .back-to-top:hover {
-    background: #cc0000;
+    background: #00368c;
     color: #fff;
 }
 
@@ -311,7 +311,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-    color: #ff712b;
+    color: #092C66;
 }
 
 .navbar-mobile .getstarted,
@@ -347,7 +347,7 @@ h6 {
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-    color: #ff712b;
+    color: #092C66;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
@@ -427,15 +427,22 @@ h6 {
 
 
 #hero .btn-get-started:hover {
-    background: #ffffff;
+    /* background: #ffffff;
     color: #ff0000;
-    box-shadow: 1px 1px 8px #ffffff;
+    box-shadow: 1px 1px 8px #ffffff; */
+    
+    transform: scale(1.1); /* Slightly enlarge the card */
+    box-shadow: 0 5px 5px #ff0000; /* Add a shadow to make it pop */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,; /* Smooth scaling */
 }
 
 #hero .btn-secondary:hover {
     /* background: #444444; */
-    color: #ffffff;
-    box-shadow: 1px 1px 8px #ffffff;
+    /* color: #ffffff;
+    box-shadow: 1px 1px 8px #ffffff; */
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 5px 5px #ff0000; /* Add a shadow to make it pop */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,; /* Smooth scaling */
 }
 
 
@@ -638,11 +645,17 @@ h6 {
     min-height: 120px; /* Adjust this to maintain consistent box height */
 }
 
+.feature-item:hover{
+transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3); /* Add a shadow to make it pop */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,; /* Smooth scaling */
+}
+
 .feature-icon {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     fill: white;
-    width: 32px;
-    height: 32px;
+    width: 64px;
+    height: 64px;
 }
 
 .features-image img {
@@ -843,6 +856,15 @@ h6 {
     text-align: left;
 }
 
+.work-box:hover {
+   /* border-color: #ff0000; */
+   transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow to make it pop */
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth scaling */
+   
+}
+
+
 .work-box h3 {
     font-size: 18px;
     margin-bottom: 10px;
@@ -892,6 +914,26 @@ h6 {
     background-color: #ffffff;
 }
 
+.testimonial-item {
+    background-color: #092C66; /* Dark blue background */
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    min-height: 350px;
+    position: relative;
+    margin: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling */
+}
+
+.testimonial-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow to make it pop */
+}
+
 .testimonials-section .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -918,7 +960,7 @@ h6 {
 }
 
 .quote-icon {
-    font-size: 36px;
+    font-size: 86px;
     color: #fff;
     position: absolute;
     top: 20px;
@@ -950,12 +992,14 @@ h6 {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
+    display: block;
 }
 
 .testimonial-author p {
-    margin: 0;
+    margin: 10px;
     font-size: 14px;
     color: #ccc;
+    display: block;
 }
 
 /* Responsive Styles */
@@ -1057,7 +1101,7 @@ h6 {
 .cta-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between buttons */
+    gap: 50px; /* Space between buttons */
 }
 .cta-buttons a{
     color: white;
@@ -1107,60 +1151,7 @@ h6 {
 # Sections General
 --------------------------------------------------------------*/
 
-section {
-    padding: 0px 0px 0px 0px;
-    overflow: hidden;
-}
 
-.section-bg {
-    background-color: #f9f9fa;
-}
-
-.section-title {
-    text-align: center;
-    padding: 30px 0;
-    position: relative;
-}
-
-.section-title h2 {
-    font-size: 32px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    padding-bottom: 0;
-    color: #5f687b;
-    position: relative;
-    z-index: 2;
-}
-
-.section-title span {
-    position: absolute;
-    top: 30px;
-    color: #f0f1f3;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    font-weight: 700;
-    font-size: 52px;
-    text-transform: uppercase;
-    line-height: 0;
-}
-
-.section-title p {
-    margin-bottom: 0;
-    position: relative;
-    z-index: 2;
-}
-
-@media (max-width: 575px) {
-    .section-title h2 {
-        font-size: 28px;
-        margin-bottom: 15px;
-    }
-    .section-title span {
-        font-size: 38px;
-    }
-}
 
 
 /*--------------------------------------------------------------
@@ -1941,7 +1932,7 @@ blockquote p {
 
 /* Copyright Section */
 .footer-bottom {
-    background-color: #ff712b;
+    background-color: #092C66;
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -1977,8 +1968,7 @@ blockquote p {
 
 /* Selection */
 
-::-moz-selection {
-    /* Code for Firefox */
+/* ::-moz-selection {
     color: #ffffff;
     background: #ff5500;
 }
@@ -1986,7 +1976,7 @@ blockquote p {
  ::selection {
     color: #ffffff;
     background: #ff5500;
-}
+} */
 
 
 
