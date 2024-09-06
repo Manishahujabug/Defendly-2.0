@@ -24,14 +24,18 @@
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Slick CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-<!-- jQuery (required by Slick) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<!-- Slick JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <!-- Slick CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <!-- jQuery (required by Slick) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Slick JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
 
     <!-- Template Main CSS File -->
@@ -58,10 +62,78 @@
             <nav id="navbar" class="navbar">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#WhoWeAre">Features</a></li>
-                    <li><a class="nav-link scrollto" href="#our-expertise">Cyber Security Services</a></li>
-                    <li><a class="nav-link scrollto" href="#">FAQ</a></li>
-                    <li><a class="nav-link scrollto" href="#get-in-touch">Contact Us</a></li>
+                    <li><a class="nav-link scrollto" href="#Features">Features</a></li>
+                    <li><a class="nav-link scrollto" href="https://www.bughunters.io/cyber-security-services/" target="_blank">Cyber
+                            Security Services</a></li>
+                    <li><a class="nav-link scrollto" href="#FAQ">FAQ</a></li>
+                    <li><a class="nav-link scrollto" href="https://www.bughunters.io/contact-us/" target="_blank">Contact Us</a></li>
+
+
+
+                    <!-- <div class="section full-height">
+                        <input class="modal-btn" type="checkbox" id="modal-btn" name="modal-btn" />
+                        <label for="modal-btn">Contact Us<i class="uil uil-expand-arrows"></i></label>
+                        <div class="modal">
+                            <div class="modal-wrap">
+                                <div class="popup-form-overlay" id="popupForm">
+                                    <div class="popup-form">
+                                        <div class="form-header">
+                                            <h2>Book a Demo</h2> -->
+
+                                            <!-- <span class="close-btn" id="closeBtn">&times;</span> -->
+                                        <!-- </div>
+                                        <form id="demoForm" action="#" method="post">
+                                            <label for="name">Name</label>
+                                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" placeholder="Your Email"
+                                                required>
+
+                                            <label for="subject">Subject</label>
+                                            <input type="text" id="subject" name="subject" placeholder="Type Here"
+                                                required>
+
+                                            <div class="form-row">
+                                                <label for="country">Country</label>
+                                                <input type="tel" id="mobile" name="mobile" required>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <label for="budget">Budget (In USD)</label>
+                                                <input type="text" id="budget" name="budget" placeholder="$5000-$10000"
+                                                    required>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <label for="how">How Did You Hear About Us?</label>
+                                                <select id="how" name="how" required>
+                                                    <option value="Google Search">Google Search</option>
+                                                    <option value="Social Media">Social Media</option>
+                                                    <option value="Referral">Referral</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                            </div>
+
+                                            <label for="description">Project Description</label>
+                                            <textarea id="description" name="description" rows="4"
+                                                placeholder="Your Project Brief"></textarea>
+
+                                            <div class="captcha">
+                                                <input type="checkbox" id="not-a-robot" name="not-a-robot" required>
+                                                <label for="not-a-robot">I'm not a robot</label>
+                                            </div>
+
+                                            <button type="submit" class="submit-btn">Send Message</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    
+                    
+
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -69,7 +141,6 @@
 
         </div>
     </header>
-    <!-- End Header -->
 
     <!-- ======= Hero Section ======= -->
     <section id="hero" style="background-image: url(Heroo\ GIF.gif); height: 700px;" class="d-flex align-items-center">
@@ -81,24 +152,26 @@
                         <h1>Protect, Detect,<br> and Defend with <br> <span style="color:#ff0000;">Defend</span>ly</h1>
                     </div>
 
-                    <h2>Our AI-driven tool scans applications in real-time, pinpointing vulnerabilities with precision. It provides AI-generated reports, clearly indicating which apps are secure, ensuring a safe online experience.</h2>
+                    <h2>Our AI-driven tool scans applications in real-time, pinpointing vulnerabilities with precision.
+                        It provides AI-generated reports, clearly indicating which apps are secure, ensuring a safe
+                        online experience.</h2>
                     <div class="d-flex">
-                        <a href="#our-expertise" class="btn-get-started scrollto chrome-button">
+                        <a href="https://www.bughunters.io/cyber-security-services/" class="btn-get-started scrollto chrome-button">
                             Add To Chrome
                             <img src="Chrome White Logo.svg" alt="Chrome Logo">
                         </a>
                         <span></span>
                         <a href="#get-in-touch" class="btn-secondary scrollto">Get Free Consultation</a>
                     </div>
-                    
+
                 </div>
-               
+
             </div>
         </div>
 
     </section>
     <!-- End Hero -->
-<br><br>
+    <br><br>
     <main id="main">
 
         <!-- ======= Stats ======= -->
@@ -121,19 +194,19 @@
                 <p>Vulnerabilities Detected</p>
             </div>
         </div>
-        
+
 
 
 
         <!-- ======= Features ======= -->
 
-        <section class="features-section">
+        <section class="features-section" id="Features">
             <div class="container">
                 <h2>Innovative Features To Secure Your Online Journey!</h2>
                 <div class="features-content">
                     <div class="features-list">
                         <div class="feature-item">
-                            <img src="Real Time Scan.svg" alt="Icon Description" class="feature-icon">
+                            <img src="Real Time Scan.svg" alt="Real Time Scanning" class="feature-icon">
                             <p>Real-Time Security Scans</p>
                         </div>
                         <div class="feature-item">
@@ -155,13 +228,13 @@
                 </div>
             </div>
         </section>
-        
+
 
 
 
 
         <!-- ======= Why Choose Defendly ======= -->
-       
+
         <section class="why-choose-section">
             <div class="container">
                 <h2>Why Choose Defendly?</h2>
@@ -172,7 +245,9 @@
                         </div>
                         <div class="choose-item-content">
                             <h3>Expertise and Experience</h3>
-                            <p>Developed by Bug Hunters, a leading name in cybersecurity, Defendly benefits from our team's extensive expertise and experience. This ensures a reliable and effective security solution.</p>
+                            <p>Developed by Bug Hunters, a leading name in cybersecurity, Defendly benefits from our
+                                team's extensive expertise and experience. This ensures a reliable and effective
+                                security solution.</p>
                         </div>
                     </div>
                     <div class="choose-item">
@@ -181,7 +256,8 @@
                         </div>
                         <div class="choose-item-content">
                             <h3>Proactive Security</h3>
-                            <p>Unlike reactive security measures that address threats after they have occurred, Defendly's real-time scans enable proactive threat detection.</p>
+                            <p>Unlike reactive security measures that address threats after they have occurred,
+                                Defendly's real-time scans enable proactive threat detection.</p>
                         </div>
                     </div>
                     <div class="choose-item">
@@ -190,7 +266,8 @@
                         </div>
                         <div class="choose-item-content">
                             <h3>Cost-Effective Solution</h3>
-                            <p>Knowing your website is continuously monitored provides peace of mind. You can focus on your core business activities while Defendly takes care of your security.</p>
+                            <p>Knowing your website is continuously monitored provides peace of mind. You can focus on
+                                your core business activities while Defendly takes care of your security.</p>
                         </div>
                     </div>
                     <div class="choose-item">
@@ -199,14 +276,15 @@
                         </div>
                         <div class="choose-item-content">
                             <h3>Community and Support</h3>
-                            <p>We value your feedback and continuously work to enhance Defendly. Join our community, share your experiences, and help shape the future of cybersecurity.</p>
+                            <p>We value your feedback and continuously work to enhance Defendly. Join our community,
+                                share your experiences, and help shape the future of cybersecurity.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
-        
+
+
 
 
         <!-- ======= How Defendly Works ======= -->
@@ -225,21 +303,24 @@
                         </div>
                         <div class="work-box">
                             <h3>Backend Processing:</h3>
-                            <p>Defendly sends a request to our backend infrastructure, extracting network payloads from the target website.</p>
+                            <p>Defendly sends a request to our backend infrastructure, extracting network payloads from
+                                the target website.</p>
                         </div>
                         <div class="work-box">
                             <h3>ML-Based Analysis:</h3>
-                            <p>Our sophisticated ML algorithms analyze the extracted data, segregating headers based on their contextual importance.</p>
+                            <p>Our sophisticated ML algorithms analyze the extracted data, segregating headers based on
+                                their contextual importance.</p>
                         </div>
                         <div class="work-box">
                             <h3>Generate Security Score:</h3>
-                            <p>The analysis culminates in a comprehensive security score and detailed report, highlighting potential vulnerabilities and providing remediation steps.</p>
+                            <p>The analysis culminates in a comprehensive security score and detailed report,
+                                highlighting potential vulnerabilities and providing remediation steps.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
 
 
 
@@ -251,7 +332,9 @@
                 <div class="testimonial-carousel">
                     <div class="testimonial-item">
                         <div class="quote-icon">“</div>
-                        <p>As a small business, we couldn't afford expensive security solutions. Defendly not only fits our budget but also offers top-notch security features that rival premium tools. It’s an essential part of our cybersecurity strategy.</p>
+                        <p>As a small business, we couldn't afford expensive security solutions. Defendly not only fits
+                            our budget but also offers top-notch security features that rival premium tools. It’s an
+                            essential part of our cybersecurity strategy.</p>
                         <div class="testimonial-author">
                             <img src="Testomonial 1.png" alt="Hadid Khan">
                             <h4>Hadid Khan</h4>
@@ -260,7 +343,9 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="quote-icon">“</div>
-                        <p>Defendly’s proactive threat detection saved us from a major vulnerability. The detailed reports and actionable recommendations make it easy for our team to stay on top of our website’s security.</p>
+                        <p>Defendly’s proactive threat detection saved us from a major vulnerability. The detailed
+                            reports and actionable recommendations make it easy for our team to stay on top of our
+                            website’s security.</p>
                         <div class="testimonial-author">
                             <img src="Testomonial 2.png" alt="Wade Warren">
                             <h4>Wade Warren</h4>
@@ -269,7 +354,9 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="quote-icon">“</div>
-                        <p>We’ve integrated Defendly into all of our web projects. It’s seamless, reliable, and gives our clients confidence that their websites are secure. I would highly recommend it to any developer.</p>
+                        <p>We’ve integrated Defendly into all of our web projects. It’s seamless, reliable, and gives
+                            our clients confidence that their websites are secure. I would highly recommend it to any
+                            developer.</p>
                         <div class="testimonial-author">
                             <img src="Testomonial 3.png" alt="Jenny Wilson">
                             <h4>Jenny Wilson</h4>
@@ -278,7 +365,9 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="quote-icon">“</div>
-                        <p>Defendly is the perfect balance between affordability and comprehensive protection. The 24/7 real-time monitoring means I can focus on my business without worrying about cyber threats.</p>
+                        <p>Defendly is the perfect balance between affordability and comprehensive protection. The 24/7
+                            real-time monitoring means I can focus on my business without worrying about cyber threats.
+                        </p>
                         <div class="testimonial-author">
                             <img src="Testomonial 4.png" alt="User Name">
                             <h4>Dan Protactor</h4>
@@ -287,7 +376,9 @@
                     </div>
                     <div class="testimonial-item">
                         <div class="quote-icon">“</div>
-                        <p>As a freelance developer, I’m always looking for tools that deliver real value. Defendly has quickly become a staple in my workflow, keeping my projects secure without any hasslem, A big thanks to bug hunters.</p>
+                        <p>As a freelance developer, I’m always looking for tools that deliver real value. Defendly has
+                            quickly become a staple in my workflow, keeping my projects secure without any hasslem, A
+                            big thanks to bug hunters.</p>
                         <div class="testimonial-author">
                             <img src="Testimonial 5.jpg" alt="User Name">
                             <h4>Tim Melon</h4>
@@ -297,69 +388,82 @@
                 </div>
             </div>
         </section>
-        
+
 
         <section class="faq-section">
-            <div class="container">
+            <div class="container" id="FAQ">
                 <h2>FAQs</h2>
-                
+
                 <div class="faq-item">
                     <button class="faq-question">What is Defendly?</button>
                     <div class="faq-answer">
-                        <p>Defendly is a cutting-edge cybersecurity tool designed by Bug Hunters. It provides real-time security scans for websites, helping to detect and mitigate vulnerabilities instantly.</p>
+                        <p>Defendly is a cutting-edge cybersecurity tool designed by Bug Hunters. It provides real-time
+                            security scans for websites, helping to detect and mitigate vulnerabilities instantly.</p>
                     </div>
                 </div>
-        
+
                 <div class="faq-item">
                     <button class="faq-question">How does Defendly work?</button>
                     <div class="faq-answer">
-                        <p>Defendly integrates with your Chrome browser as an extension. It continuously monitors your website’s interactions over the internet, identifying potential threats and providing actionable insights to improve security.</p>
+                        <p>Defendly integrates with your Chrome browser as an extension. It continuously monitors your
+                            website’s interactions over the internet, identifying potential threats and providing
+                            actionable insights to improve security.</p>
                     </div>
                 </div>
-        
+
                 <div class="faq-item">
                     <button class="faq-question">Who should use Defendly?</button>
                     <div class="faq-answer">
-                        <p>Defendly is ideal for businesses, developers, freelancers, and educational institutions looking to secure their online presence. Whether you're managing an e-commerce platform, a small business website, or a personal project, Defendly offers robust protection.</p>
+                        <p>Defendly is ideal for businesses, developers, freelancers, and educational institutions
+                            looking to secure their online presence. Whether you're managing an e-commerce platform, a
+                            small business website, or a personal project, Defendly offers robust protection.</p>
                     </div>
                 </div>
-        
+
                 <div class="faq-item">
                     <button class="faq-question">Is Defendly easy to install?</button>
                     <div class="faq-answer">
-                        <p>Yes, installing Defendly is quick and simple. Just visit the Chrome Web Store, search for Defendly, and click “Add to Chrome.” Follow the on-screen instructions, and you’ll be up and running in no time.</p>
+                        <p>Yes, installing Defendly is quick and simple. Just visit the Chrome Web Store, search for
+                            Defendly, and click “Add to Chrome.” Follow the on-screen instructions, and you’ll be up and
+                            running in no time.</p>
                     </div>
                 </div>
-        
+
                 <div class="faq-item">
                     <button class="faq-question">What kind of threats can Defendly detect?</button>
                     <div class="faq-answer">
-                        <p>Defendly can detect a wide range of cyber threats, including malware, phishing attempts, unauthorized access, and other vulnerabilities that could compromise your website’s security.</p>
+                        <p>Defendly can detect a wide range of cyber threats, including malware, phishing attempts,
+                            unauthorized access, and other vulnerabilities that could compromise your website’s
+                            security.</p>
                     </div>
                 </div>
-        
+
                 <div class="faq-item">
                     <button class="faq-question">What support options are available for Defendly users?</button>
                     <div class="faq-answer">
-                        <p>As a Defendly user, you have access to a vibrant community and exceptional customer support from the Bug Hunters team. Whether you have a question or need assistance, we’re here to help.</p>
+                        <p>As a Defendly user, you have access to a vibrant community and exceptional customer support
+                            from the Bug Hunters team. Whether you have a question or need assistance, we’re here to
+                            help.</p>
                     </div>
                 </div>
-        
+
                 <div class="faq-item">
                     <button class="faq-question">Can I see a demo of how Defendly works?</button>
                     <div class="faq-answer">
-                        <p>Yes, we offer a demo that walks you through the key features and functionality of Defendly. Visit our website or contact our support team to learn more.</p>
+                        <p>Yes, we offer a demo that walks you through the key features and functionality of Defendly.
+                            Visit our website or contact our support team to learn more.</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
 
 
         <!-- ======= CTA ======= -->
         <section class="cta-section">
             <div class="container">
-                <p class="cta-text"><b>Made For All, Loved By <strong>Web Developer</strong> And <strong>Security Experts</strong></b></p>
+                <p class="cta-text"><b>Made For All, Loved By <strong>Web Developer</strong> And <strong>Security
+                            Experts</strong></b></p>
                 <div class="cta-buttons">
                     <a href="#" class="cta-button add-to-chrome">
                         Add To Chrome <img src="Chrome White Logo.svg" alt="Chrome Logo">
@@ -370,50 +474,127 @@
                 </div>
             </div>
         </section>
-        
+
+
+        <!-- ======= Upgrades ======= -->
+        <section class="upgrades-section">
+            <div class="container">
+                <h2>Defendly Has Been Upgraded</h2>
+                <p>Version 1.1.3.5</p>
+                <div class="upgrades-content">
+                    <div class="upgrades-box">
+                        <h3>Additions</h3>
+                        <ul>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                        </ul>
+                    </div>
+                    <div class="upgrades-box">
+                        <h3>Improvements</h3>
+                        <ul>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                            <li>ABCDABCDABCDABCD</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
 
 
 
 
 
-        
 
 
-<!-- Footer Section -->
-<section class="footer-section">
-    <div class="container">
-        <div class="footer-logo">
-            <img src="Defendly Logo SVG.svg" alt="Company Logo">
-            <p><b>A Product By Bug Hunters</b></p>
+
+        <!-- Footer Section -->
+        <section class="footer-section">
+            <div class="container">
+                <div class="footer-logo">
+                    <img src="Defendly Logo SVG.svg" alt="Company Logo">
+                    <p><b>A Product By Bug Hunters</b></p>
+                </div>
+                <div class="footer-links">
+                    <h4><strong>Useful Links</strong></h4>
+                    <ul>
+                        <li><a href="#About">About Us</a></li>
+                        <li><a href="#our-expertise">Services</a></li>
+                        <li><a href="#get-in-touch">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4><b><strong>Bug Hunters</strong></b></h4>
+                    <P>Your Allies in Software Testing and Cyber Security</P>
+                    <p>Mobile: +91 9910 95 0727 / +1 (403) 371 9571</p>
+                    <p>Email: <a href="mailto:hello@bughunters.io">hello@bughunters.io</a></p>
+                    <p>India, United Kingdom, Canada, Singapore</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Copyright Section -->
+        <footer class="footer-bottom">
+            <div class="container">
+                <p>© Copyright 2024 by Bug Hunters Private Limited (R). All Rights Reserved.</p>
+            </div>
+        </footer>
+
+
+        <!-- Button trigger modal -->
+
+
+        <!-- Modal -->
+
+
+
         </div>
-        <div class="footer-links">
-            <h4><strong>Useful Links</strong></h4>
-            <ul>
-                <li><a href="#About">About Us</a></li>
-                <li><a href="#our-expertise">Services</a></li>
-                <li><a href="#get-in-touch">Contact Us</a></li>
-            </ul>
+        <!-- 
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-        <div class="footer-contact">
-            <h4><b><strong>Bug Hunters</strong></b></h4>
-            <P>Your Allies in Software Testing and Cyber Security</P>
-            <p>Mobile: +91 9910 95 0727 / +1 (403) 371 9571</p>
-            <p>Email: <a href="mailto:hello@bughunters.io">hello@bughunters.io</a></p>
-            <p>India, United Kingdom, Canada, Singapore</p>
+        <div class="modal-body">
+          
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
         </div>
+      </div>
     </div>
-</section>
+  </div> -->
 
 
-<!-- Copyright Section -->
-<footer class="footer-bottom">
-    <div class="container">
-        <p>© Copyright 2024 by Bug Hunters Private Limited (R). All Rights Reserved.</p>
-    </div>
-</footer>
-</main>
+
+    </main>
     <!-- End #main -->
+
+
+    <!-- Contact Form Popup -->
+
+
+    <!-- Scripts and Closing Body Tag -->
+    <script src="assets/js/main.js"></script>
+
+
+
+
 
 
 
@@ -425,7 +606,7 @@
             let email = document.getElementById("email").value;
             let phone = document.getElementById("contact-number").value;
             let message = document.getElementById("message").value;
-            
+
             let body = `
                 <h3>New Inquiry</h3>
                 <p><strong>Name:</strong> ${name}</p>
@@ -448,7 +629,7 @@
                     let confirmation = document.getElementById("confirmation-message");
                     confirmation.innerHTML = "Your message has been sent successfully! We will get back to you soon.";
                     confirmation.style.display = "block";
-                    
+
                     // Hide confirmation message after 4 seconds
                     setTimeout(() => {
                         confirmation.style.display = "none";
@@ -460,7 +641,7 @@
                     confirmation.innerHTML = "Oops! Something went wrong. Please try again later.";
                     confirmation.style.display = "block";
                     confirmation.style.color = "red";
-                    
+
                     // Hide error message after 4 seconds
                     setTimeout(() => {
                         confirmation.style.display = "none";
@@ -471,7 +652,8 @@
     </script>
 
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -483,6 +665,9 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+
+
 
 </body>
 

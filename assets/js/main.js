@@ -228,138 +228,66 @@ document.querySelectorAll('.faq-question').forEach(item => {
 });
 
 
-  
 
 
 
+// JavaScript for showing and closing the popup form
 
 
+// JavaScript for showing and closing the popup form
 
+// Get the form and buttons
+var popupForm = document.getElementById("popupForm");
+var contactBtn = document.querySelector(".contact-btn"); // Ensure this matches the navbar contact button
+var closeBtn = document.getElementById("closeBtn");
 
+// When the user clicks the "Contact Us" button, open the form
+contactBtn.addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent default action
+    popupForm.style.display = "flex";
+});
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
+// When the user clicks on the close button, close the form
+closeBtn.addEventListener("click", function() {
+    popupForm.style.display = "none";
+});
 
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
+// When the user clicks outside the form, close the form
+window.addEventListener("click", function(event) {
+    if (event.target == popupForm) {
+        popupForm.style.display = "none";
     }
-  });
+});
 
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
+// Initialize Intl-Tel-Input for country flag and phone number validation
+var input = document.querySelector("#mobile");
+var iti = window.intlTelInput(input, {
+    initialCountry: "auto",
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
+});
+
+// Form validation
+document.getElementById("demoForm").addEventListener("submit", function(event) {
+    if (!iti.isValidNumber()) {
+        alert("Please enter a valid mobile number.");
+        event.preventDefault();
+    }
+});
+
+
 
 })()
 
 
 
-// .........................................
-// <!-- Our Expertise Section -->
-// ..........................................
-function showContent(tabId) {
-  // Get all elements with class="content" and hide them
-  var contentSections = document.getElementsByClassName("content");
-  for (var i = 0; i < contentSections.length; i++) {
-      contentSections[i].style.display = "none";
-      contentSections[i].classList.remove("active");
-  }
-
-  // Get all elements with class="tab-button" and remove the class "active"
-  var tabButtons = document.getElementsByClassName("tab-button");
-  for (var i = 0; i < tabButtons.length; i++) {
-      tabButtons[i].classList.remove("active");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabId).style.display = "block";
-  document.getElementById(tabId).classList.add("active");
-  event.currentTarget.classList.add("active");
-}
-
-// Display the first tab by default
-document.getElementById("strategic").style.display = "block";
-document.getElementById("strategic").classList.add("active");
-
-
-
-function toggleAccordion(accordionId, buttonElement) {
-  var content = document.getElementById(accordionId);
-
-  // Check if the clicked section is already open
-  if (content.style.display === 'block') {
-      // If it's open, close it
-      content.style.display = 'none';
-      buttonElement.classList.remove('active');
-  } else {
-      // Close all accordion items first
-      var allContents = document.getElementsByClassName('accordion-content');
-      var allButtons = document.getElementsByClassName('accordion-button');
-
-      for (var i = 0; i < allContents.length; i++) {
-          allContents[i].style.display = 'none';
-          allButtons[i].classList.remove('active');
-      }
-
-      // Then, open the clicked accordion item
-      content.style.display = 'block';
-      buttonElement.classList.add('active');
-  }
-}
 
 
 
 
 
 
-function validateEmail(email) {
-  var re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-  return re.test(email);
-}
 
-function showPopup(message, success = false) {
-  var modal = document.getElementById("popupModal");
-  var popupMessage = document.getElementById("popupMessage");
 
-  popupMessage.textContent = message;
-  if (success) {
-      popupMessage.style.color = "green";
-  } else {
-      popupMessage.style.color = "red";
-  }
 
-  modal.style.display = "block";
 
-  // Close the modal when the user clicks on <span> (x)
-  document.getElementsByClassName("close")[0].onclick = function() {
-      modal.style.display = "none";
-  };
 
-  // Close the modal when the user clicks anywhere outside of the modal
-  window.onclick = function(event) {
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
-  };
-}
