@@ -1,0 +1,26 @@
+# Content Security Policy (CSP)
+Header set Content-Security-Policy "default-src 'self'; img-src 'self' data:; script-src 'self' 'upgrade-insecure-requests'; style-src 'self' 'unsafe-inline';"
+
+# X-Frame-Options to prevent clickjacking
+Header always set X-Frame-Options "DENY"
+
+# X-XSS-Protection to prevent cross-site scripting (XSS) attacks
+Header set X-XSS-Protection "1; mode=block"
+
+# Referrer-Policy to control what information is shared in the Referer header
+Header always set Referrer-Policy "no-referrer"
+
+# X-Content-Type-Options to prevent MIME-sniffing
+Header set X-Content-Type-Options "nosniff"
+
+# Strict-Transport-Security (HSTS) to enforce HTTPS
+Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+# Permissions Policy to restrict APIs
+Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+
+# Cache-Control for security and performance
+Header always set Cache-Control "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+
+# Expect-CT to enforce Certificate Transparency
+Header always set Expect-CT "max-age=86400, enforce"

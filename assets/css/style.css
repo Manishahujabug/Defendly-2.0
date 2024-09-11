@@ -162,7 +162,7 @@ h6 {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-    color: #ff0000;
+    color: #872723;
 }
 
 .navbar .getstarted,
@@ -205,34 +205,6 @@ h6 {
     font-weight: 600;
 }
 
-.navbar .dropdown ul a i {
-    font-size: 12px;
-}
-
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
-    color: #16df7e;
-}
-
-.navbar .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-}
-
-.navbar .dropdown .dropdown ul {
-    top: 0;
-    left: calc(100% - 30px);
-    visibility: hidden;
-}
-
-.navbar .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: 100%;
-    visibility: visible;
-}
 
 @media (max-width: 1366px) {
     .navbar .dropdown .dropdown ul {
@@ -311,13 +283,7 @@ h6 {
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-    color: #092C66;
-}
-
-.navbar-mobile .getstarted,
-.navbar-mobile .getstarted:focus {
-    margin: 15px;
-    padding: 10px 15px;
+    color: #ff712b;
 }
 
 .navbar-mobile .dropdown ul {
@@ -340,19 +306,21 @@ h6 {
     padding: 10px 20px;
 }
 
-.navbar-mobile .dropdown ul a i {
-    font-size: 12px;
-}
-
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
 .navbar-mobile .dropdown ul li:hover>a {
-    color: #092C66;
+    color: #ff712b;
 }
 
 .navbar-mobile .dropdown>.dropdown-active {
     display: block;
 }
+
+/* Prevent body scrolling when mobile navbar is open */
+.no-scroll {
+    overflow: hidden;
+}
+
 
 
 /*--------------------------------------------------------------
@@ -361,11 +329,11 @@ h6 {
 
 #hero {
     width: 100%;
-    /* height: 80vh; */
-    background-size: cover;  /* Ensures the image covers the entire area */
-    background-position: center;  /* Centers the image in the carousel */
-    background-repeat: no-repeat; /* Ensures the image doesn't repeat */
-    padding-top: 200px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+    height: auto;
 }
 
 #hero h1 {
@@ -373,15 +341,15 @@ h6 {
     font-size: 66px;
     font-weight: 700;
     line-height: 76px;
-    color: #ffffff;
+    color: #000000;
 }
 
-#hero .row{
+#hero .row {
     padding-bottom: 80px;
 }
 
 #hero h2 {
-    color: #ffffff;
+    color: #000000;
     margin: 10px 0 30px 0;
     font-size: 20px;
     line-height: 30px;
@@ -397,9 +365,9 @@ h6 {
     border-radius: 8px;
     transition: 0.3s;
     color: #fff;
-    background: #ff0000;
-    box-shadow: 1px 1px 6px #ff0000;
-    margin-right: 20px; /* Add margin to the right of the button */
+    background: #000000;
+    box-shadow: 1px 1px 6px #000000;
+    margin-right: 20px;
 }
 
 #hero .btn-secondary {
@@ -411,92 +379,132 @@ h6 {
     padding: 10px 20px;
     border-radius: 8px;
     transition: 0.3s;
-    color: #fff;
-    border: 2px solid #ff0000;
+    color: #000000;
+    border: 2px solid #000000;
 }
 
 .chrome-button img {
-    width: 30px; /* Width of the Chrome logo */
-    height: 30px; /* Height of the Chrome logo */
-    margin-left: 10px; /* Space between text and logo */
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
 }
 
 .chrome-button img:hover {
-    fill: #ff0000;    
+    fill: #000000;
 }
 
-
-#hero .btn-get-started:hover {
-    /* background: #ffffff;
-    color: #ff0000;
-    box-shadow: 1px 1px 8px #ffffff; */
-    
-    transform: scale(1.1); /* Slightly enlarge the card */
-    box-shadow: 0 5px 5px #ff0000; /* Add a shadow to make it pop */
-    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,; /* Smooth scaling */
-}
-
+#hero .btn-get-started:hover,
 #hero .btn-secondary:hover {
-    /* background: #444444; */
-    /* color: #ffffff;
-    box-shadow: 1px 1px 8px #ffffff; */
-    transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0 5px 5px #ff0000; /* Add a shadow to make it pop */
-    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,; /* Smooth scaling */
+    transform: scale(1.1);
+    box-shadow: 0 5px 5px #000000;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 }
 
-
+/* Image Animation */
 #hero .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
+    height: auto;
+    width: 60%;
+    margin-left: 30%;
+    border-radius: 10px;
 }
 
+/* Mobile Responsive Adjustments */
 @media (max-width: 991px) {
     #hero {
-        background-position: right; 
+        padding-top: 150px;
+        background-position: right;
+    }
+
+    #hero h1 {
+        font-size: 40px;
+        line-height: 48px;
+        font-weight: bold;
+    }
+
+    #hero h2 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    #hero .d-flex {
+        flex-direction: row; /* Stack buttons vertically */
+        align-items: left;
     }
     #hero .hero-img {
-        text-align: center;
-    }
-    #hero .hero-img img {
-        width: 90%;
+        display: none; /* Hide the image on screens smaller than 768px */
     }
 }
 
+/* Hide image on mobile devices and adjust buttons */
 @media (max-width: 768px) {
-    #hero {
-        background-position: -650px;
-    }
     #hero h1 {
-        font-size: 30px;
-        line-height: 36px;
+        font-size: 36px;
+        line-height: 42px;
     }
+
     #hero h2 {
         font-size: 16px;
         line-height: 24px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
-    #hero .hero-img img {
-        width: 70%;
+
+    #hero .hero-img {
+        display: none; /* Hide the image on screens smaller than 768px */
+    }
+
+    /* Make buttons full-width on mobile */
+    #hero .btn-get-started,
+    #hero .btn-secondary {
+        font-size: 14px;
+        padding: 12px 24px;
+        width: 100%; /* Full-width buttons on mobile */
+        text-align: center;
+        margin-bottom: 10px; /* Add spacing between buttons */
+    }
+
+    /* Resize the Chrome icon on mobile */
+    .chrome-button img {
+        width: 24px; /* Smaller icon on mobile */
+        height: 24px;
+        margin-left: 8px;
     }
 }
 
+/* Further adjustments for smaller screens */
 @media (max-width: 575px) {
-    #hero .hero-img img {
-        width: 80%;
-    }
-    #hero .btn-get-started {
-        font-size: 12px;
-    }
-    #hero .btn-secondary {
-        font-size: 12px;
+    #hero h1 {
+        font-size: 28px;
+        line-height: 32px;
     }
 
+    #hero h2 {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    #hero .btn-get-started,
+    #hero .btn-secondary {
+        font-size: 12px;
+        padding: 10px 20px;
+        width: 100%; /* Full-width buttons on mobile */
+        margin-bottom: 8px;
+        align-content: center;
+    }
+
+    /* Further resize of Chrome icon for smaller screens */
+    .chrome-button img {
+        width: 20px; /* Smaller icon on very small screens */
+        height: 20px;
+        margin-left: 6px;
+    }
 }
 
 @-webkit-keyframes up-down {
     0% {
         transform: translateY(10px);
     }
+
     100% {
         transform: translateY(-10px);
     }
@@ -506,10 +514,12 @@ h6 {
     0% {
         transform: translateY(10px);
     }
+
     100% {
         transform: translateY(-10px);
     }
 }
+
 
 
 
@@ -519,7 +529,7 @@ h6 {
 --------------------------------------------------------------*/
 
 .stats-container {
-    background-color: #092C66; /* Dark blue background color */
+    background-color: #DEE5D4; /* Dark blue background color */
     padding: 20px 20px; /* Padding for spacing inside the container */
     border-radius: 20px; /* Rounded corners */
     display: flex; /* Flexbox to align items horizontally */
@@ -528,11 +538,12 @@ h6 {
     max-width: 1000px; /* Maximum width of the container */
     margin: 0 auto; /* Center the container on the page */
     box-sizing: border-box; /* Include padding in the element's width and height */
+    cursor: default;
 }
 
 .stat-item {
     text-align: center; /* Center the text within each item */
-    color: white; /* White text color */
+    color: #000000; /* White text color */
     flex: 1; /* Each item takes up an equal portion of the available space */
     margin: 10px 0; /* Add some margin between items on smaller screens */
 }
@@ -551,7 +562,8 @@ h6 {
 
 
 .stat-item h3:hover {
-    color: #ff0000;    
+    color: #092C66;    
+    transform: scale(1.05); /* Slightly enlarge the card */
 }
 
 
@@ -592,6 +604,10 @@ h6 {
 # Features
 --------------------------------------------------------------*/
 
+/*--------------------------------------------------------------
+# Features
+--------------------------------------------------------------*/
+
 .features-section {
     padding: 40px 20px;
     text-align: center;
@@ -602,7 +618,6 @@ h6 {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 
 .features-section h2 {
     font-size: 28px;
@@ -632,8 +647,8 @@ h6 {
 }
 
 .feature-item {
-    background-color: #092C66; /* Dark blue background */
-    color: white;
+    background-color: #DEE5D4; /* Dark blue background */
+    color: #000000;
     border-radius: 15px;
     padding: 20px;
     flex: 1 1 calc(50% - 20px); /* Two items per row, with a gap */
@@ -643,12 +658,12 @@ h6 {
     justify-content: center;
     text-align: center;
     min-height: 120px; /* Adjust this to maintain consistent box height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
 }
 
-.feature-item:hover{
-transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3); /* Add a shadow to make it pop */
-    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out,; /* Smooth scaling */
+.feature-item:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3); /* Increase shadow for a smoother pop */
 }
 
 .feature-icon {
@@ -726,38 +741,19 @@ transform: scale(1.05); /* Slightly enlarge the card */
 }
 
 .choose-item {
-    background-color: #092C66; /* Dark blue background */
-    color: white;
+    background-color: #DEE5D4; /* Dark blue background */
+    color: #000000;
     border-radius: 15px;
     padding: 20px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex: 1 1 calc(50% - 20px); /* Two items per row */
     position: relative;
-    min-height: 160px;
+    /* min-height: 160px; */
     overflow: hidden; /* Hide part of the image that overlaps the container */
 }
 
-.choose-item-image {
-    position: absolute;
-    left: 0px; /* Move image to overlap the box */
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100px; /* Image width */
-    height: 160px;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.choose-item-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the area */
-    border-radius: 10px;
-}
-
 .choose-item-content {
-    margin-left: 100px; /* Ensure content is not under the image */
     text-align: left;
 }
 
@@ -769,6 +765,7 @@ transform: scale(1.05); /* Slightly enlarge the card */
 
 .choose-item-content p {
     font-size: 14px;
+    color: #092C66;
     margin: 0;
 }
 
@@ -783,12 +780,7 @@ transform: scale(1.05); /* Slightly enlarge the card */
     }
 
     .choose-item-image {
-        /* position: static;
-        transform: none;
-        margin-right: 15px;
-        height: 100px;
-        width: auto; */
-        display: none;
+        display: none; /* Hide image on smaller screens */
     }
 
     .choose-item-content {
@@ -798,13 +790,14 @@ transform: scale(1.05); /* Slightly enlarge the card */
 
 
 
+
 /*--------------------------------------------------------------
 # How Defendly WOrks
 --------------------------------------------------------------*/
 .how-it-works-section {
     padding: 40px 20px;
-    background-color: #092C66; /* Dark blue background */
-    color: white;
+    background-color: #D2E0FB; /* Dark blue background */
+    
     text-align: center;
 }
 
@@ -817,7 +810,7 @@ transform: scale(1.05); /* Slightly enlarge the card */
     font-size: 28px;
     margin-bottom: 40px;
     font-weight: bold;
-    color: white;
+    color: #000000;
 }
 
 .how-it-works-content {
@@ -849,8 +842,8 @@ transform: scale(1.05); /* Slightly enlarge the card */
 }
 
 .work-box {
-    background-color: #092C66; /* Slightly lighter blue background */
-    border: 2px solid white;
+    background-color: #DEE5D4; /* Slightly lighter blue background */
+    border: 2px solid #092C66;
     border-radius: 15px;
     padding: 20px;
     text-align: left;
@@ -869,11 +862,13 @@ transform: scale(1.05); /* Slightly enlarge the card */
     font-size: 18px;
     margin-bottom: 10px;
     font-weight: bold;
+    color: #000000;
 }
 
 .work-box p {
     font-size: 14px;
     margin: 0;
+    color: #092C66;
 }
 
 /* Responsive Styles */
@@ -915,8 +910,8 @@ transform: scale(1.05); /* Slightly enlarge the card */
 }
 
 .testimonial-item {
-    background-color: #092C66; /* Dark blue background */
-    color: white;
+    background-color: #DEE5D4; /* Dark blue background */
+    color: #000000;
     border-radius: 15px;
     padding: 20px;
     min-height: 350px;
@@ -947,8 +942,8 @@ transform: scale(1.05); /* Slightly enlarge the card */
 }
 
 .testimonial-carousel .testimonial-item {
-    background-color: #092C66; /* Dark blue background */
-    color: white;
+    background-color: #DEE5D4; /* Dark blue background */
+    color: #000000;
     border-radius: 15px;
     padding: 20px;
     min-height: 350px;
@@ -961,7 +956,7 @@ transform: scale(1.05); /* Slightly enlarge the card */
 
 .quote-icon {
     font-size: 86px;
-    color: #fff;
+    color: #092C66;
     position: absolute;
     top: 20px;
     left: 20px;
@@ -969,7 +964,7 @@ transform: scale(1.05); /* Slightly enlarge the card */
 
 .testimonial-item p{
     margin-top: 76px;
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 1rem;
     text-align: left;
     
@@ -993,12 +988,13 @@ transform: scale(1.05); /* Slightly enlarge the card */
     font-size: 18px;
     font-weight: bold;
     display: block;
+    color: #092C66;
 }
 
 .testimonial-author p {
     margin: 10px;
     font-size: 14px;
-    color: #ccc;
+    color: #092C66;
     display: block;
 }
 
@@ -1031,17 +1027,17 @@ transform: scale(1.05); /* Slightly enlarge the card */
     font-size: 28px;
     margin-bottom: 30px;
     font-weight: bold;
-    color: #092C66;
+    color: #000000;
 }
 
 .faq-item {
     margin-bottom: 15px;
-    border-bottom: 2px solid #092C66; /* Adds a separator between items */
+    border-bottom: 2px solid #DEE5D4; /* Adds a separator between items */
 }
 
 .faq-question {
     background-color: transparent;
-    color: #092C66;
+    color: #000000;
     font-size: 18px;
     font-weight: bold;
     width: 100%;
@@ -1054,7 +1050,7 @@ transform: scale(1.05); /* Slightly enlarge the card */
 }
 
 .faq-question:hover {
-    color: #ff0000; /* Change color on hover */
+    color: #872723; /* Change color on hover */
 }
 
 .faq-answer {
@@ -1062,7 +1058,7 @@ transform: scale(1.05); /* Slightly enlarge the card */
     overflow: hidden;
     transition: max-height 0.5s ease, padding 0.5s ease; /* Add padding transition for a smoother effect */
     padding-left: 10px;
-    color: #333;
+    color: #092C66;
     padding-top: 0; /* No padding initially */
     padding-bottom: 0; /* No padding initially */
 }
@@ -1072,7 +1068,10 @@ transform: scale(1.05); /* Slightly enlarge the card */
 }
 
 .faq-item.active .faq-question {
-    color: #ff0000; /* Change question color when active */
+    color: #872723; /* Change question color when active */
+    font-size: 20px;
+    font-weight: 800;
+    transition: 0.5ms;
 }
 
 
@@ -1095,7 +1094,8 @@ transform: scale(1.05); /* Slightly enlarge the card */
 }
 
 .cta-text strong {
-    color: #092C66; /* Highlighted text color */
+    font-weight: 900;
+    color: #872723;
 }
 
 .cta-buttons {
@@ -1103,11 +1103,13 @@ transform: scale(1.05); /* Slightly enlarge the card */
     justify-content: center;
     gap: 50px; /* Space between buttons */
 }
-.cta-buttons a{
+
+.cta-buttons a {
     color: white;
 }
+
 .cta-button {
-    background-color: #092C66; /* Dark blue background */
+    background-color: #000000; /* Dark blue background */
     color: white;
     font-size: 16px;
     padding: 15px 25px;
@@ -1116,7 +1118,9 @@ transform: scale(1.05); /* Slightly enlarge the card */
     align-items: center;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: 0.3s;
+    box-shadow: 1px 1px 6px #000000;
+    justify-content: center;
 }
 
 .cta-button img {
@@ -1125,34 +1129,59 @@ transform: scale(1.05); /* Slightly enlarge the card */
 }
 
 .cta-button:hover {
-    background-color: #ff0000; /* Slightly lighter blue on hover */
+    background-color: #000000; /* Slightly lighter on hover */
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 5px 5px #000000; /* Add a shadow to make it pop */
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out; /* Smooth scaling */
 }
-
-
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .cta-text {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
     .cta-buttons {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row; /* Stack buttons vertically on smaller screens */
+        gap: 10px; /* Reduce gap between buttons */
     }
 
     .cta-button {
         width: 100%; /* Make buttons full-width on small screens */
         justify-content: center;
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 12px 20px; /* Adjust padding for smaller screens */
+    }
+
+    .cta-button img {
+        width: 18px; /* Adjust size of the Chrome logo on mobile */
     }
 }
+
+/* Further adjustments for extra small screens */
+@media (max-width: 575px) {
+    .cta-text {
+        font-size: 20px; /* Further reduce font size for very small screens */
+    }
+
+    .cta-button {
+        font-size: 12px; /* Further reduce font size */
+        padding: 10px 15px; /* Adjust padding */
+    }
+
+    .cta-button img {
+        width: 16px; /* Reduce Chrome logo size for extra small screens */
+    }
+}
+
 
 
 /*--------------------------------------------------------------
 # Upgrades Section
 --------------------------------------------------------------*/
-
-
-
-.upgrades-section {
+/* .upgrades-section {
     padding: 40px 20px;
-    background-color: #092C66; /* Dark Blue Background */
+    background-color: #092C66; 
     color: white;
     text-align: center;
 }
@@ -1202,7 +1231,7 @@ li {
     font-size: 16px;
 }
 
-/* Responsive Styles */
+Responsive Styles
 @media (max-width: 768px) {
     .upgrades-content {
         flex-direction: column;
@@ -1213,7 +1242,7 @@ li {
         width: 90%;
         margin-bottom: 20px;
     }
-}
+} */
 
 
 
@@ -1342,6 +1371,7 @@ form .form-row {
     line-height: 1.6;
     margin-top: 10px;
     text-align: justify;
+    
 }
 
 .footer-links {
@@ -1353,6 +1383,7 @@ form .form-row {
 .footer-links h4 {
     font-size: 18px;
     margin-bottom: 15px;
+    color: #872723;
 }
 
 .footer-links ul {
@@ -1366,13 +1397,13 @@ form .form-row {
 }
 
 .footer-links ul li a {
-    color: #444444;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-links ul li a:hover {
-    color: #ff712b;
+    color: #ff0000;
 }
 
 .footer-contact {
@@ -1383,6 +1414,7 @@ form .form-row {
 .footer-contact h4 {
     font-size: 20px;
     margin-bottom: 15px;
+    color: #872723;
 }
 
 .footer-contact p {
@@ -1419,11 +1451,12 @@ form .form-row {
 
 /* Copyright Section */
 .footer-bottom {
-    background-color: #092C66;
-    color: white;
+    background-color: #D2E0FB;
+    color: #000000;
     padding: 10px 0;
     text-align: center;
     font-size: 14px;
+    font-weight: 500;
 }
 
 .footer-bottom p {
