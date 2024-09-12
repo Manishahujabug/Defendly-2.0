@@ -219,29 +219,15 @@ h6 {
 /**
 * Mobile Navigation 
 */
-
-.mobile-nav-toggle {
-    color: #5f687b;
-    font-size: 28px;
-    cursor: pointer;
-    display: none;
-    line-height: 0;
-    transition: 0.5s;
+/* General Styles */
+#header {
+    background: #fff;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 10px 0;
 }
 
-.mobile-nav-toggle.bi-x {
-    color: #fff;
-}
-
-@media (max-width: 991px) {
-    .mobile-nav-toggle {
-        display: block;
-    }
-    .navbar ul {
-        display: none;
-    }
-}
-
+/* Mobile Navigation Styles */
 .navbar-mobile {
     position: fixed;
     overflow: hidden;
@@ -251,13 +237,7 @@ h6 {
     bottom: 0;
     background: rgba(73, 80, 94, 0.9);
     transition: 0.3s;
-    z-index: 999;
-}
-
-.navbar-mobile .mobile-nav-toggle {
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    z-index: 9999;
 }
 
 .navbar-mobile ul {
@@ -267,54 +247,53 @@ h6 {
     right: 15px;
     left: 15px;
     padding: 10px 0;
-    border-radius: 10px;
     background-color: #fff;
-    overflow-y: auto;
-    transition: 0.3s;
+    border-radius: 10px;
+    list-style: none;
+    text-align: center;
 }
 
-.navbar-mobile a,
-.navbar-mobile a:focus {
-    padding: 10px 20px;
-    font-size: 15px;
+.navbar-mobile ul li {
+    margin-bottom: 20px;
+}
+
+.navbar-mobile ul li a {
+    font-size: 18px;
     color: #000000;
-}
-
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover>a {
-    color: #ff712b;
-}
-
-.navbar-mobile .dropdown ul {
-    position: static;
-    display: none;
-    margin: 10px 20px;
-    padding: 10px 0;
-    z-index: 99;
-    opacity: 1;
-    visibility: visible;
-    background: #fff;
-    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-}
-
-.navbar-mobile .dropdown ul li {
-    min-width: 200px;
-}
-
-.navbar-mobile .dropdown ul a {
+    text-decoration: none;
     padding: 10px 20px;
+    transition: color 0.3s;
 }
 
-.navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile ul li a:hover {
     color: #ff712b;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
-    display: block;
+.mobile-nav-toggle {
+    font-size: 28px;
+    cursor: pointer;
+    color: #5f687b;
+    display: none;
+    transition: 0.5s;
 }
+
+@media (max-width: 991px) {
+    .mobile-nav-toggle {
+        display: block;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+
+
+
 
 /* Prevent body scrolling when mobile navbar is open */
 .no-scroll {
@@ -332,7 +311,7 @@ h6 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding-top: 100px;
+    padding-top: 200px;
     height: auto;
 }
 
@@ -716,7 +695,7 @@ h6 {
 --------------------------------------------------------------*/
 
 .why-choose-section {
-    padding: 40px 20px;
+    padding: 40px;
     text-align: center;
     background-color: #ffffff;
 }
@@ -795,7 +774,7 @@ h6 {
 # How Defendly WOrks
 --------------------------------------------------------------*/
 .how-it-works-section {
-    padding: 40px 20px;
+    padding: 40px;
     background-color: #D2E0FB; /* Dark blue background */
     
     text-align: center;
@@ -847,13 +826,14 @@ h6 {
     border-radius: 15px;
     padding: 20px;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
 }
 
 .work-box:hover {
    /* border-color: #ff0000; */
-   transform: scale(1.05); /* Slightly enlarge the card */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add a shadow to make it pop */
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth scaling */
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3); /* Increase shadow for a smoother pop */
+    
    
 }
 

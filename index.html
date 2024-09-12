@@ -5,11 +5,9 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
    
-
     <title>Defendly</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-
 
     <!-- Favicons -->
     <link href="Defendly Favicon.png" rel="icon">
@@ -29,6 +27,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
 
     <!-- Slick CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
@@ -53,25 +54,29 @@
 
 <body>
 
-    <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
         <div class="container d-flex align-items-center justify-content-between">
             <h1 class="logo">
-                <a href="index.html"><img style="width:auto;" src="Defendly Logo Updated.svg"></a>
+                <a href="index.html">
+                    <img style="width:auto;" src="Defendly Logo Updated.svg" alt="Defendly Logo">
+                </a>
             </h1>
     
             <nav id="navbar" class="navbar">
-                <ul>
+                <ul id="nav-list">
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#Features">Features</a></li>
                     <li><a class="nav-link scrollto" href="https://www.bughunters.io/cyber-security-services/" target="_blank">Cyber Security Services</a></li>
                     <li><a class="nav-link scrollto" href="#FAQ">FAQ</a></li>
                     <li><a class="nav-link scrollto" href="https://www.bughunters.io/contact-us/" target="_blank">Contact Us</a></li>
                 </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i> <!-- This is the hamburger icon -->
+                <i class="bi bi-list mobile-nav-toggle" id="mobile-menu-toggle"></i>
             </nav>
         </div>
     </header>
+    
+    
+    
     
 
 
@@ -152,7 +157,7 @@
             <div class="row">
                 <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
                     <div id="heading">
-                        <h1>Protect, Detect,<br> and Defend with <br> <span style="color:#872723;">Defend</span>ly</h1>
+                        <h1><b>Protect, Detect,<br> and Defend with <br> <span style="color:#872723;">Defend</span>ly</b></h1>
                     </div>
 
                     <h2>Our AI-driven tool scans applications in real-time, pinpointing vulnerabilities with precision.

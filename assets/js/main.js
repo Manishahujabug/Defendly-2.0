@@ -60,6 +60,9 @@
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
+
+
+
   /**
    * Scrolls to an element with header offset
    */
@@ -78,6 +81,9 @@
     })
   }
 
+
+
+
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
    */
@@ -93,6 +99,9 @@
     window.addEventListener('load', headerScrolled)
     onscroll(document, headerScrolled)
   }
+
+
+
 
   /**
    * Back to top button
@@ -115,47 +124,32 @@
 
 
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const mobileNavToggle = document.getElementById("mobile-menu-toggle");
+    const navList = document.getElementById("nav-list");
+
+    // Toggle the mobile menu when the button is clicked
+    mobileNavToggle.addEventListener("click", function() {
+        navList.classList.toggle("navbar-mobile");
+
+        // Switch the menu icon from the hamburger (bi-list) to close (bi-x)
+        this.classList.toggle("bi-list");
+        this.classList.toggle("bi-x");
+    });
+
+    // Close the mobile menu when a link is clicked
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function() {
+            navList.classList.remove("navbar-mobile");
+            mobileNavToggle.classList.add("bi-list");
+            mobileNavToggle.classList.remove("bi-x");
+        });
+    });
+});
 
 
-
-
-
-  /**
-   * Mobile nav dropdowns activate
-   */
-  on('click', '.navbar .dropdown > a', function(e) {
-    if (select('#navbar').classList.contains('navbar-mobile')) {
-      e.preventDefault()
-      this.nextElementSibling.classList.toggle('dropdown-active')
-    }
-  }, true)
-
-
-
-
-    /**
-   * Mobile nav toggle
-   */
-    on('click', '.mobile-nav-toggle', function(e) {
-      select('#navbar').classList.toggle('navbar-mobile')
-      this.classList.toggle('bi-list')
-      this.classList.toggle('bi-x')
-    })
   
-    /**
-     * Mobile nav dropdowns activate
-     */
-    on('click', '.navbar .dropdown > a', function(e) {
-      if (select('#navbar').classList.contains('navbar-mobile')) {
-        e.preventDefault()
-        this.nextElementSibling.classList.toggle('dropdown-active')
-      }
-    }, true)
-  
-
-
-
-
 
 
 
@@ -260,50 +254,6 @@ document.querySelectorAll('.faq-question').forEach(item => {
 
 
 
-
-
-// JavaScript for showing and closing the popup form
-
-
-// JavaScript for showing and closing the popup form
-
-// Get the form and buttons
-var popupForm = document.getElementById("popupForm");
-var contactBtn = document.querySelector(".contact-btn"); // Ensure this matches the navbar contact button
-var closeBtn = document.getElementById("closeBtn");
-
-// When the user clicks the "Contact Us" button, open the form
-contactBtn.addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent default action
-    popupForm.style.display = "flex";
-});
-
-// When the user clicks on the close button, close the form
-closeBtn.addEventListener("click", function() {
-    popupForm.style.display = "none";
-});
-
-// When the user clicks outside the form, close the form
-window.addEventListener("click", function(event) {
-    if (event.target == popupForm) {
-        popupForm.style.display = "none";
-    }
-});
-
-// Initialize Intl-Tel-Input for country flag and phone number validation
-var input = document.querySelector("#mobile");
-var iti = window.intlTelInput(input, {
-    initialCountry: "auto",
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js"
-});
-
-// Form validation
-document.getElementById("demoForm").addEventListener("submit", function(event) {
-    if (!iti.isValidNumber()) {
-        alert("Please enter a valid mobile number.");
-        event.preventDefault();
-    }
-});
 
 
 
